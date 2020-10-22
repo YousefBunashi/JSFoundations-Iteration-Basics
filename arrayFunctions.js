@@ -10,7 +10,10 @@
  */
 function getOdds(numbers) {
   // Your code here
-}
+  let oddNumbers = numbers.filter(function (number) {
+    return number % 2 !== 0;
+  });
+  return oddNumbers;
 
 /**
  * getEvens(numbers):
@@ -24,6 +27,10 @@ function getOdds(numbers) {
  */
 function getEvens(numbers) {
   // Your code here
+  let evenNumbers = numbers.filter(function (number) {
+    return number % 2 === 0;
+  });
+  return evenNumbers;
 }
 
 /**
@@ -37,7 +44,16 @@ function getEvens(numbers) {
  */
 function getDuplicateCount(x, numbers) {
   // Your code here
-}
+  let counter = 0;
+  numbers.forEach(function(number){
+
+  if (number === x ){
+  counter = counter +1;
+  }
+});
+  return counter;
+  }
+
 
 /**
  * makeThemDoctors(students):
@@ -50,6 +66,11 @@ function getDuplicateCount(x, numbers) {
 
 function makeThemDoctors(students) {
   // Your code here
+  const Doctors = students.map(function(student) {
+    return `Dr. ${students}`;
+  
+  });
+  return Doctors;
 }
 
 module.exports = { getOdds, getEvens, getDuplicateCount, makeThemDoctors };
